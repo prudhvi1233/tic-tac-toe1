@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Professional Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Theme -->
+    <div class="background-theme"></div>
+    
+    <!-- Watermark -->
+    <div class="watermark">Designed by Nandini</div>
+    
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page active">
+        <div class="container welcome-container">
+            <h1 class="welcome-title">Welcome to the Tic Tac Toe Game</h1>
+            <div class="buttons-container">
+                <button class="game-mode-btn" id="aiBtn" data-mode="ai">
+                    <span>Play with AI</span>
+                </button>
+                <button class="game-mode-btn" id="multiplayerBtn" data-mode="multiplayer">
+                    <span>Multiplayer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Player Names Form -->
+    <div id="formPage" class="page">
+        <div class="container form-container">
+            <h2 class="form-title">Enter Player Names</h2>
+            <div id="singlePlayerForm" class="player-form">
+                <input type="text" id="playerName1" placeholder="Enter your name" maxlength="20" autocomplete="off">
+                <button id="startSingleBtn" class="start-btn">Start Game</button>
+            </div>
+            <div id="multiPlayerForm" class="player-form hidden">
+                <input type="text" id="playerName1Multi" placeholder="Player 1 Name" maxlength="20" autocomplete="off">
+                <input type="text" id="playerName2Multi" placeholder="Player 2 Name" maxlength="20" autocomplete="off">
+                <button id="startMultiBtn" class="start-btn">Start Game</button>
+            </div>
+            <button id="backBtn" class="back-btn">Back</button>
+        </div>
+    </div>
+    
+    <!-- Game Board -->
+    <div id="gamePage" class="page">
+        <div class="container game-container">
+            <div class="header">
+                <h1>Tic Tac Toe</h1>
+                <div class="players-info">
+                    <span id="player1Display" class="player-info"></span>
+                    <span id="player2Display" class="player-info"></span>
+                </div>
+                <div class="status-container">
+                    <h2 id="status"></h2>
+                </div>
+            </div>
+            
+            <div class="game-board-section">
+                <div id="board" class="board"></div>
+            </div>
+            
+            <div class="controls">
+                <button class="reset-btn" id="restartBtn">
+                    <span>Restart Game</span>
+                </button>
+                <button class="back-btn" id="backToMenuBtn">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
